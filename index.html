@@ -1,1 +1,34 @@
-E
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What date are we today ?</title>
+        <script type="text/javascript" src="script.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <p id="whatdatearewe_today" align="center"></p>
+
+        <div class="clock">
+            <span id="hr">00</span>
+            <span> : </span>
+            <span id="min">00</span>
+            <span> : </span>
+            <span id="sec">00</span>
+        </div>
+    </body>
+
+<script>
+var d = new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"]; // <- Im not good with these so if some wrong, fix it lol
+
+var month = months[d.getMonth()];
+var today = d.getDate();
+var day = days[d.getDay()];
+var year = d.getFullYear();
+
+document.getElementById("whatdatearewe_today").innerHTML = day + " " + today + " " + month + " " + year;
+
+</script>
+</html>
